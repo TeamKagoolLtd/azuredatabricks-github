@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v1
+#     - uses: actions/checkout@v1
     
     - name: databricks-import-directory
       uses: microsoft/databricks-import-directory@v1.0.0
