@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: [Kagool-Velocity-Self-Host-Runner]
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
     - name: databricks-import-directory
