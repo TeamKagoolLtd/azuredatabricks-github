@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v1
     
     - name: databricks-import-directory
-    - uses: microsoft/databricks-import-directory@v1.0.0
+    - uses: microsoft/databricks-import-directory@master
       with:
         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
         databricks-token: dapic0ad793e62f534c98a44957f0708a304-2
