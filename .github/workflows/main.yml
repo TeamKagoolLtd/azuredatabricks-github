@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: self-hosted
-#     runs-on: windows-latest
+#     runs-on: self-hosted
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
     
 #     - name: databricks-import-directory
-#     - uses: microsoft/databricks-import-directory@1
+    - uses: microsoft/databricks-import-directory@1
 #       with:
 #         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
 #         databricks-token: dapic0ad793e62f534c98a44957f0708a304-2
