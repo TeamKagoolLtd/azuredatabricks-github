@@ -6,8 +6,10 @@ jobs:
   build:
     runs-on: [self-hosted, Windows]
     steps:
-    - uses: actions/checkout@v1
-    - uses: microsoft/install-databricks-cli@v1.0.0
+    - name: Check out repository
+      uses: actions/checkout@v3
+    - name: Install Databricks cli
+      uses: microsoft/install-databricks-cli@v1.0.0
     - uses: microsoft/databricks-import-directory@v1.0.0
       with:
         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
