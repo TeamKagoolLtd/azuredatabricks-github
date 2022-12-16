@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: [self-hosted, Windows, X64]
+    runs-on: [self-hosted, Windows]
     steps:
     - uses: actions/checkout@v1
     - uses: microsoft/install-databricks-cli@v1.0.0
