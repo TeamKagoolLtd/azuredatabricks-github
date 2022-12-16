@@ -13,11 +13,11 @@ jobs:
       uses: actions/checkout@v3
     - name: Install Databricks cli
       uses: microsoft/install-databricks-cli@v1.0.0
-    - id: azure-resource-login
-      uses: Azure/azure-resource-login-action@v1.0.0
+    - name: Login via Az module
+      uses: azure/login@v1
       with:
         creds: ${{ secrets.KAGOOL_GITHUB_CREDENTIALS }}
-        resource-url: 2ff814a6-3304-4ab8-85cb-cd0e6f879c1d
+        enable-AzPSSession: true 
     - uses: ./
       with:
         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
