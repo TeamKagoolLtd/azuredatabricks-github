@@ -7,9 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
-    - name: install-databricks-cli
-      uses: microsoft/install-databricks-cli@v1.0.0
-    - name: databricks-import-directory
+    - uses: microsoft/install-databricks-cli@v1.0.0
     - uses: microsoft/databricks-import-directory@v1.0.0
       with:
         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
