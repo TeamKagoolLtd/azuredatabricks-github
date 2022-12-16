@@ -9,7 +9,7 @@ jobs:
     - name: Check out repository
       with:
         repository: TeamKagoolLtd/azuredatabricks-github
-        ref: v1.0
+       # ref: v1.0
       uses: actions/checkout@v3
     - name: Install Databricks cli
       uses: microsoft/install-databricks-cli@v1.0.0
