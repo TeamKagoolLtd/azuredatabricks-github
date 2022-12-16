@@ -10,15 +10,19 @@ jobs:
       with:
         repository: TeamKagoolLtd/azuredatabricks-github
        # ref: v1.0
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
+      
     - name: Install Databricks cli
       uses: microsoft/install-databricks-cli@v1.0.0
+      
     - name: Login via Az module
       uses: azure/login@v1
       with:
         creds: ${{ secrets.KAGOOL_GITHUB_CREDENTIALS }}
-        enable-AzPSSession: true 
-    - uses: ./
+        enable-AzPSSession: true
+        
+    - name: Import Databricks notebooks    
+      uses: ./
       with:
         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
         databricks-token: dapic0ad793e62f534c98a44957f0708a304-2
