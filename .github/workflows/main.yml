@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
 jobs:
   build:
-#     runs-on: self-hosted
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
-    
-#     - name: databricks-import-directory
+    - name: install-databricks-cli
+      uses: microsoft/install-databricks-cli@v1.0.0
+    - name: databricks-import-directory
     - uses: microsoft/databricks-import-directory@v1.0.0
       with:
         databricks-host: https://adb-2466824116276953.13.azuredatabricks.net
