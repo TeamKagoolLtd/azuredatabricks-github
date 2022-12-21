@@ -7,9 +7,6 @@ jobs:
     runs-on: [self-hosted, Windows]
     steps:
     - name: Check out repository
-      with:
-        repository: TeamKagoolLtd/azuredatabricks-github
-       # ref: v1.0
       uses: actions/checkout@v2
       
     - name: Install Databricks cli
