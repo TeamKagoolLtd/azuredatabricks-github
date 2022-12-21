@@ -9,8 +9,8 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
       
-    - name: Install Databricks cli
-      uses: microsoft/install-databricks-cli@v1.0.0
+   # - name: Install Databricks cli
+   #   uses: microsoft/install-databricks-cli@v1.0.0
       
     - name: Login via Az module
       uses: azure/login@v1
