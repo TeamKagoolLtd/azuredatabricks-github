@@ -17,6 +17,9 @@ jobs:
         
     - name: check out repo
       uses: actions/checkout@v2
+      
+    - name: install-databricks-cli
+      uses: microsoft/install-databricks-cli@v1.0.0
     
     - name: Import Databricks notebooks    
       uses: microsoft/databricks-import-notebook@v1.0.0
