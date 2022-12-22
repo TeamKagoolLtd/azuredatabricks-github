@@ -18,6 +18,9 @@ jobs:
         creds: ${{ secrets.KAGOOL_GITHUB_CREDENTIALS }}
         enable-AzPSSession: true
         
+    - name: check out repo
+      uses: actions/checkout@v2
+        
     - name: Import Databricks notebooks    
       uses: ./
       with:
