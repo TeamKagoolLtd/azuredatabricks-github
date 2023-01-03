@@ -29,5 +29,4 @@ jobs:
     - name: Run Script
       shell: powershell
       run: |
-        ./scripts/databricks.cicd.tools.ps1 
-        -authType "sp" -region "eastus2" -artifactName "artifactName" -applicationid "9d0f5ea0-93fa-4315-95ff-7dc0a1ebabb4" -secret ".mP8Q~DA7UQjHvqQm3L.S4VRgD12RG__-mkLMccl" -resourceGroup "rg-kdevops-prod" -subscriptionid "eb5a257a-76e2-472d-9fdc-7f9b3172fcf6" -workSpaceName "dkgldmdbrkeus01" -tenantid "82583032-c12a-4a39-a1b7-a28b18bccc03"
+        ./scripts/databricks.cicd.tools.ps1 -authType "sp" -region "eastus2" -artifactName "artifactName" -applicationid "9d0f5ea0-93fa-4315-95ff-7dc0a1ebabb4" -secret ".mP8Q~DA7UQjHvqQm3L.S4VRgD12RG__-mkLMccl" -resourceGroup "rg-kdevops-prod" -subscriptionid "eb5a257a-76e2-472d-9fdc-7f9b3172fcf6" -workSpaceName "dkgldmdbrkeus01" -tenantid "82583032-c12a-4a39-a1b7-a28b18bccc03"
