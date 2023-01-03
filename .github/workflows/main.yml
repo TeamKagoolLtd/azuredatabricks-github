@@ -1,3 +1,4 @@
+name: DataBricks_Notebook_Deployment
 on:
   push:
     branches: main
