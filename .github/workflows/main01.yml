@@ -18,7 +18,7 @@ jobs:
     - run: echo hello > source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
     - uses: actions/upload-artifact@v3
       with:
-        name: my-artifact
+        name: artifactName
         path: source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
         
     - name: Run Pre-deployment scripts
