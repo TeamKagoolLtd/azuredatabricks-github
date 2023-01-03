@@ -11,4 +11,4 @@ jobs:
       uses: actions/checkout@v2
       
     - name: unzip artifact for deployment
-      run: /source/velocity_modules.zip
+      run: ./source/velocity_modules.zip
