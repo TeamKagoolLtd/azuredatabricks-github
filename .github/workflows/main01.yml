@@ -10,8 +10,5 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
       
-    - name: schmiddim-wget-unzip
-      uses: schmiddim/action-wget-unzip@v2
-      with:
-        url: /source/velocity_modules.zip
-        destination: /source
+    - name: unzip artifact for deployment
+      run: /source/velocity_modules.zip
