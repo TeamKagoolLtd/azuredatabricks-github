@@ -20,7 +20,6 @@ jobs:
       with:
         name: artifactName
         path: source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
-        destination: ./source/
         
     - name: Run Pre-deployment scripts
       shell: powershell
@@ -29,4 +28,4 @@ jobs:
     - name: Run Script
       shell: powershell
       run: |
-        ./scripts/databricks.cicd.tools.ps1 -artifactName "test001"
+        ./scripts/databricks.cicd.tools.ps1
