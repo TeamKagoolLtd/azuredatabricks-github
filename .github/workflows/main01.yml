@@ -14,4 +14,3 @@ jobs:
       uses: brunoborges/justextract@v1
       with:
         file: /source/velocity_modules.zip
-        File Extension: zip
