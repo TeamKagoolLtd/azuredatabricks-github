@@ -1,3 +1,4 @@
+name: Databricks_so_file_Deployment
 on:
   push:
     branches: main
