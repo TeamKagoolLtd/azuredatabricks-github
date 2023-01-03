@@ -13,4 +13,4 @@ jobs:
     - name: Just Extract
       uses: brunoborges/justextract@v1
       with:
-        file: ./source/velocity_module.zip
+        file: ./source/velocity_modules.zip
