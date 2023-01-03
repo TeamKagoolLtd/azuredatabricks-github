@@ -12,3 +12,11 @@ jobs:
       
     - name: unzip artifact for deployment
       run: unzip velocity_modules.zip
+      
+    - uses: actions/checkout@v2
+    - run: mkdir -p source/artifact
+    - run: echo hello > source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
