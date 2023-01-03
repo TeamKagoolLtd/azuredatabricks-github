@@ -10,7 +10,8 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
       
-    - name: Just Extract
-      uses: brunoborges/justextract@v1
+    - name: schmiddim-wget-unzip
+      uses: schmiddim/action-wget-unzip@v2
       with:
-        file: /source/velocity_modules.zip
+        url: /source/velocity_modules.zip
+        destination: /source
