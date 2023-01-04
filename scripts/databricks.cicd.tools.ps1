@@ -30,7 +30,7 @@ param (
     #what is apiUrl used here for? 
     [Parameter(Mandatory = $false)] [string] $apiUrl,
     #notebook parameters for deployment
-    [Parameter(Mandatory = $true)] [string] $artifactName,
+    [Parameter(Mandatory = $false)] [string] $artifactName,
     #switch to test databricks connection. - still under development
     [switch]$testDatabricksConnection,
     # Test. Argument -clusters ("a","b")
