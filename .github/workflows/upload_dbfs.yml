@@ -1,4 +1,4 @@
-name: Databricks_so_file_Deployment
+name: upload-dbfs-file
 on:
   push:
     branches: upload_dbfs
