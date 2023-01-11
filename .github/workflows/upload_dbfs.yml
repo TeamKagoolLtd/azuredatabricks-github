@@ -1,4 +1,4 @@
-name: 'upload-dbfs-temp'
+name: Databricks_so_file_Deployment
 description: >
   Upload a file on the local filesystem to a temporary DBFS location,
   returning the DBFS path of the uploaded file.
