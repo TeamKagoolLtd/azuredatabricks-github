@@ -1,7 +1,7 @@
 name: Databricks_so_file_Deployment
 on:
   push:
-    branches: sofilebranch
+    branches: upload_dbfs
   workflow_dispatch:
 jobs:
   check-dist:
