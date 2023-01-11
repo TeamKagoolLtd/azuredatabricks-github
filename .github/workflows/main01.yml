@@ -5,10 +5,28 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
       
     - name: unzip artifact for deployment
-      run: /source/velocity_modules.zip
+      run: Expand-Archive velocity_modules.zip
+      
+    - uses: actions/checkout@v2
+    - run: mkdir -p source/artifact
+    - run: echo hello > source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: artifactName
+        path: source/kdp_databricks.cpython-38-x86_64-linux-gnu.so
+        
+    - name: Run Pre-deployment scripts
+      shell: powershell
+      run: mkdir "WebApp_Source"
+      
+    - name: Run Script
+      shell: powershell
+      run: |
+        ./scripts/databricks.cicd.tools.ps1
