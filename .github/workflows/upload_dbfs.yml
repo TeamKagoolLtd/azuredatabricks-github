@@ -26,4 +26,4 @@ jobs:
         uses: databricks/upload-dbfs-temp@v0
         id: upload_so_file
         with:
-          local-path: rajesh/kdp_functions.cpython-37m-x86_64-linux-gnu.so
+          local-path: ./rajesh/kdp_functions.cpython-37m-x86_64-linux-gnu.so
