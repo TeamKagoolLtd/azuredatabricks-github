@@ -7,6 +7,7 @@ on:
   
 env:
   DATABRICKS_HOST: https://adb-2466824116276953.13.azuredatabricks.net
+  DATABRICKS_TOKEN: dapic0ad793e62f534c98a44957f0708a304-2
   
 jobs:
   build:
