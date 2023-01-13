@@ -1,11 +1,13 @@
-name: upload-dbfs-file
+name: Upload_dbfs_file
 on:
   push:
-    branches: upload_dbfs
+    branches:
+      - upload_dbfs
   workflow_dispatch:
+
 jobs:
   check-dist:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
     steps:
       - uses: actions/checkout@v2
 
@@ -29,6 +31,7 @@ jobs:
           fi
         id: diff
 
+      # If index.js was different than expected, upload the expected version as an artifact
       - uses: actions/upload-artifact@v2
         if: ${{ failure() && steps.diff.conclusion == 'failure' }}
         with:
