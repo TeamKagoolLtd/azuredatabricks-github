@@ -2,7 +2,7 @@ name: Upload_dbfs_file
 on:
   push:
     branches:
-      - upload_dbfs
+      - upload-dbfs
   workflow_dispatch:
 
 jobs:
