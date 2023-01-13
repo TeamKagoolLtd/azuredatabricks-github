@@ -1,17 +1,23 @@
-name: Upload_dbfs_file
+name: upload-dbfs-file
 on:
   push:
-    branches:
-      - upload-dbfs
+    branches: upload_dbfs
   workflow_dispatch:
-
 jobs:
-  check-dist:
-    runs-on: [self-hosted, Windows, X64]
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checks out the repo
+        uses: actions/checkout@v2
 
-      - uses: actions/upload-artifact@v2
+      - name: Login via Az module
+        uses: azure/login@v1
         with:
-          name: rajesh
-          path: rajesh/
+          creds: ${{ secrets.KAGOOL_GITHUB_CREDENTIALS }}
+          enable-AzPSSession: true
+          
+      - name: Upload Wheel
+        uses: databricks/upload-dbfs-temp@v0
+        id: upload_so_file
+        with:
+          local-path: rajesh/kdp_functions.cpython-37m-x86_64-linux-gnu.so
