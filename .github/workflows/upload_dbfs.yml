@@ -1,8 +1,13 @@
 name: upload-dbfs-file
+
 on:
   push:
     branches: upload-dbfs
   workflow_dispatch:
+  
+env:
+  DATABRICKS_HOST: https://adb-2466824116276953.13.azuredatabricks.net
+  
 jobs:
   build:
     runs-on: ubuntu-latest
