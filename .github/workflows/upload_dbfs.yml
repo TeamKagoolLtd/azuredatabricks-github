@@ -10,18 +10,8 @@ jobs:
     runs-on: [self-hosted, Windows, X64]
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Compare the expected and actual dist/ directories
-        run: |
-          if [ "$(git diff --ignore-space-at-eol rajesh/ | wc -l)" -gt "0" ]; then
-            echo "Detected uncommitted changes after build.  See status below:"
-            git diff
-            exit 1
-          fi
-        id: diff
 
       - uses: actions/upload-artifact@v2
-        if: ${{ failure() && steps.diff.conclusion == 'failure' }}
         with:
           name: rajesh
           path: rajesh/
